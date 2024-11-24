@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-content class="background-image" no-scroll >
+    <ion-card color="light ion-margin-top">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center ion-margin-top">LOGIN</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input class="ion-margin-top"  label="email" label-placement="floating" fill="outline"  [(ngModel)]="getEmail" type="email" placeholder="Email"></ion-input>
+        <ion-input class="ion-margin-top" label="password" label-placement="floating" fill="outline" [(ngModel)]="getPassword" type="password" placeholder="password"></ion-input>
+        <ion-text color="primary" class="forgot-password ion-text-end" (click)="forgotPassword()">
+          Forgot Password?
+        </ion-text>
+  <ion-button (click)="loginUser()" shape="round ion-margin-top ion-margin-bottom" expand="full">Login</ion-button>
+  <ion-text color="secondary" class="ion-margin-top ion-margin-bottom" >
+    You don't have an account ? <span><a routerLink="/signup">Sign Up</a></span>
+  </ion-text>
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-content class="background-image" no-scroll >
+    <ion-card color="light ion-margin-top">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center ion-margin-top">SIGNUP</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input class="ion-margin-top"  label="email" label-placement="floating" fill="outline"  [(ngModel)]="getEmail" type="email" placeholder="Email"></ion-input>
+        <ion-input class="ion-margin-top" label="password" label-placement="floating" fill="outline" [(ngModel)]="getPassword" type="password" placeholder="password"></ion-input>
+        <ion-input class="ion-margin-top" label="confirm password" label-placement="floating" fill="outline" [(ngModel)]="getConfirmPassword" type="password" placeholder="confirm password"></ion-input>
+
+  <ion-button (click)="signupUser()" shape="round ion-margin-top ion-margin-bottom" expand="full">Sign Up</ion-button>
+  <ion-text color="secondary" class="ion-margin-top ion-margin-bottom" >
+    You already have an account ? <span><ion-text color="primary" class="forgot-password" (click)="login()">
+      SignUp here
+    </ion-text></span>
+  </ion-text>
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
